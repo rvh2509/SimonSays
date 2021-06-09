@@ -189,7 +189,7 @@ void renderGame() {
           }
         }
         
-        sequence[i] = (random(1, FINGERS + 1));
+        sequence[i] = nextNum;
       }
       displaySequence(sequence, false);
       roundStart = false;
@@ -385,7 +385,7 @@ void renderRoundWin() {
   oled.setCursor(textX, textY);
   oled.print(winText);
 
-  const char completedText[] = "Rounds Completed: ";
+  const char completedText[] = "Rounds Completed:";
   
   oled.setTextSize(1);
   oled.setTextColor(WHITE, BLACK);
